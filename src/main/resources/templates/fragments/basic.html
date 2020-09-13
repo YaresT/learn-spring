@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/ico" href="/image/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <link href="/css/style.css" rel="stylesheet">
+
+    <title>Title</title>
+</head>
+
+<body>
+    <header id="main-header" th:fragment="header">
+        <div class="header">
+            <a href="#default" class="logo">Spring lesson</a>
+            <div class="header-right">
+                <a href="/">Home</a>
+                <a href="/product">Product list</a>
+                <a href="/product/new">Create product</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidenav" th:fragment="sidebar">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+        <button class="dropdown-btn">Dropdown
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+        <a href="#contact">Search</a>
+    </div>
+
+    <footer class="footer" th:fragment="footer">
+        © 2020 Spring Learning
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/layout">
+
+<head>
+</head>
+<body>
+<div class="container" layout:fragment="content">
+    <form action="#" th:method="post" th:action="@{/product/edit}" th:object="${product}">
+        <input type="hidden" th:field="*{id}" th:value="${product.id}">
+        <div class="row">
+            <div class="col-25">
+                <label>Product name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" th:field="*{name}" th:value="${product.name}" placeholder="Product name..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Product price</label>
+            </div>
+            <div class="col-75">
+                <input type="text" th:field="*{cost}" th:value="${product.cost}" placeholder="Product price..">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit"><input type="reset" value="Reset" />
+        </div>
+    </form>
+</div>
+</body>
+</html>
